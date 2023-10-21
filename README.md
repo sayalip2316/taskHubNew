@@ -1,27 +1,42 @@
-# AngularRouting
+# TaskHub - Project Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+TaskHub is a project management application built with Angular. It helps you organize and manage your projects, tasks, and team members efficiently. This README provides an overview of the application, how to set it up, and how to use it effectively.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Dashboard:** View a list of projects, their details, and assigned team members.
+- ![image](https://github.com/sayalip2316/projectHub/assets/119415321/3ae94eaf-1366-4c5a-9754-02ea9f345938)
 
-## Code scaffolding
+- **Create Project:** Easily create a new project with essential details.
+- ![image](https://github.com/sayalip2316/projectHub/assets/119415321/0ae49bee-50d2-46eb-ac88-377afb2f05dd)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Create Task:** Add tasks to your projects with descriptions, due dates, priorities, and status.
+- ![image](https://github.com/sayalip2316/projectHub/assets/119415321/2be0303c-de2b-4c4b-ad58-b392afabd174)
 
-## Build
+- **Manage Team:** Organize your project team, assign members, and track their progress.
+- **User Profile:** Access and update your user profile information.
+- ![image](https://github.com/sayalip2316/projectHub/assets/119415321/a548c3ae-1b87-4579-971f-6ca1b96047eb)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Table of Contents
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## Running end-to-end tests
+## Prerequisites
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Before you begin, ensure you have met the following requirements:
 
-## Further help
+- [Angular CLI](https://angular.io/cli)
+- [Node.js and npm](https://nodejs.org/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Installation
+
+1. **Clone this repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/TaskHub.git
