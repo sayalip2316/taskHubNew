@@ -1,0 +1,44 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a routerLink="/dashboard"><img src="/assets/logo.png" alt="Your Logo" onerror="this.src='/assets/fallback.png'"></a>
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/task-form">Create Task</a></li>
+    <li><a routerLink="/create-project">Create Project</a></li>
+    <li><img src="/assets/profile.png" id="profile"><a [routerLink]="['/profile']" class="profile-link">{{ getUserName() }}</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+  <h1>Project Details</h1>
+  <div class="container">
+    <div class="child">
+      <div class="card-deck">
+        <div class="card" *ngFor="let project of projects">
+          <div class="card-body">
+            <h2 class="card-title">{{ project.name }}</h2>
+            <p class="card-text"><strong>Project Manager:</strong> {{ project.projectManager.name }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ project.description }}</p>
+            <p class="card-text"><strong>Start Date:</strong> {{ project.startDate | date: 'shortDate' }}</p>
+            <p class="card-text"><strong>End Date:</strong> {{ project.endDate | date: 'shortDate' }}</p>
+           <div class="card-text teamM">
+  <strong>Team Members:</strong>
+  <ul>
+    <li *ngFor="let member of project.teamMembers">{{ member.name }}</li>
+  </ul>
+</div>
+
+                        
+            <div class="btn-group">
+              <button (click)="deleteProject(project._id)" class="btn btn-danger">Delete</button>
+            <button (click)="updateProject(project)" class="btn btn-primary">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,55 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a routerLink="/dashboard"><img src="/assets/logo.png" alt="Your Logo" onerror="this.src='/assets/fallback.png'"></a>
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/task-form">Create Task</a></li>
+    <li><img src="/assets/profile.png" id="profile"><a [routerLink]="['/profile']" class="profile-link">{{ getUserName() }}</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+    <h1>Create Project</h1>
+    <form (ngSubmit)="createProject()" #projectForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="newProject.name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" [(ngModel)]="newProject.description"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" [(ngModel)]="newProject.startDate">
+      </div>
+  
+      <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" [(ngModel)]="newProject.endDate">
+      </div>
+  
+      <div class="form-group">
+        <label for="projectManager">Project Manager:</label>
+        <select id="projectManager" name="projectManager" [(ngModel)]="newProject.projectManager">
+          <option *ngFor="let manager of projectManagers" [value]="manager._id">{{ manager.name }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="teamMembers">Team Members:</label>
+        <select id="teamMembers" name="teamMembers" [(ngModel)]="newProject.teamMembers" multiple>
+          <option *ngFor="let member of teamMembers" [value]="member._id">{{ member.name }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit">Create Project</button>
+      </div>
+    </form>
+  </div>
+  

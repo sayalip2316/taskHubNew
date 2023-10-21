@@ -1,0 +1,159 @@
+/* Add a different background color to the navbar */
+.navbar {
+  background-color: black; /* Your desired navbar background color */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border:1px solid white; */
+}
+
+/* Style the navbar logo (if needed) */
+.navbar-logo img {
+  width:40%;
+  border-radius: 100%;
+  /* Adjust the logo height as needed */
+}
+
+/* Style the links in the navbar */
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff; /* Link text color */
+  font-weight: bold;
+  font-size: 17px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #FFD700; /* Change link color on hover */
+}
+.profile-link {
+  text-decoration: none;
+  color: teal;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-link:hover {
+  text-decoration: underline; /* Underline the link on hover */
+}
+#profile{
+  background-color: white;
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+
+/* CSS for Project Cards */
+.main{
+  width:100%;
+  background-color: #003201;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+}
+h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+.container {
+  background-color: #003201; /* Set the theme color as the background for the container */
+  color: #fff; /* Text color on the theme background */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  flex: 0 1 calc(33.3333% - 20px); /* Display three cards per row with 20px spacing between */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color:black;
+  text-align:center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fb390e;
+}
+
+.card-text {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.teamM{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+
+strong{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style the list items */
+li {
+  margin-bottom: 5px;
+}
+
+/* Style links in card text */
+.card-text a {
+  text-decoration: none;
+  color: teal;
+}
+
+.card-text a:hover {
+  text-decoration: underline;
+}
+
+.btn-group{
+  width:100%;
+  display: flex;
+  gap:10px;
+}
+.btn-group>button{
+  width:80%;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.btn-group>button:nth-child(1){
+  background-color: red;
+}
+.btn-group>button:nth-child(2){
+  background-color:teal;
+}

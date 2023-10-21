@@ -1,0 +1,29 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="navbar-logo">
+      <a routerLink="/dashboard"><img src="/assets/logo.png" alt="Your Logo" onerror="this.src='/assets/fallback.png'"></a>
+    </div>
+    <ul class="navbar-links">
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+      <li><a routerLink="/task-form">Create Task</a></li>
+      <li><a routerLink="/create-project">Create Project</a></li>
+    </ul>
+  </nav>
+
+<div  class="profile">
+    <h1>User Profile</h1>
+<div>
+    
+    <div *ngIf="user">
+        <img *ngIf="user.profilePicture" [src]="user.profilePicture" alt="Profile Picture">
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Role:</strong> {{ user.role }}</p>
+      <button (click)="logout()">Logout=></button>
+    </div>
+    <div *ngIf="!user">
+      <p>User information is not available.</p>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,99 @@
+/* Add a different background color to the navbar */
+.navbar {
+    background-color: black; /* Your desired navbar background color */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border:1px solid white; */
+  }
+  
+  /* Style the navbar logo (if needed) */
+  .navbar-logo img {
+    width:40%;
+    border-radius: 100%;
+    /* Adjust the logo height as needed */
+  }
+  
+  /* Style the links in the navbar */
+  .navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-links li {
+    margin-right: 20px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #fff; /* Link text color */
+    font-weight: bold;
+    font-size: 17px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #FFD700; /* Change link color on hover */
+  }
+  
+  
+  
+
+.profile {
+    width: 100%;
+    height: 95vh;
+    padding: 20px;
+    margin: 0;
+    background-color: #003201;
+    color: white; /* Text color for the profile */
+    box-sizing: border-box;
+  }
+  .profile>div{
+    width:40%;
+    margin: auto;
+    padding: 50px;
+    background-color: rgb(196, 193, 193);
+    text-align: center;
+    color: black;
+  }
+  .profile h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .profile p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .profile img {
+    width: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+  }
+  
+  /* Styling for the "User information is not available." message */
+  .user-not-available {
+    text-align: center;
+    color: #f00; /* Red color for emphasis */
+    font-weight: bold;
+  }
+
+  button{
+    background-color: #FFD700;
+    color:black;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover{
+    background-color: #FFA500;
+  }

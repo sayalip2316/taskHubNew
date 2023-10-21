@@ -1,0 +1,72 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a routerLink="/dashboard"><img src="/assets/logo.png" alt="Your Logo" onerror="this.src='/assets/fallback.png'"></a>
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/task-form">Create Task</a></li>
+    <li><a routerLink="/create-project">Create Project</a></li>
+    <li><img src="/assets/profile.png" id="profile"><a [routerLink]="['/profile']" class="profile-link">{{ getUserName() }}</a></li>
+  </ul>
+</nav>
+
+<div id="container">
+  <h1>Create Task</h1>
+  <div class="task-form">
+    <form (ngSubmit)="createTask()" #taskForm="ngForm">
+      <div class="form-group">
+
+        <div class="form-group">
+          <label for="project">Project:</label>
+          <select id="project" name="project" [(ngModel)]="newTask.project" (change)="onProjectChange()">
+            <option *ngFor="let project of projects" [value]="project._id">{{ project.name }}</option>
+          </select>
+        </div>
+        
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" [(ngModel)]="newTask.title" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" [(ngModel)]="newTask.description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate" [(ngModel)]="newTask.dueDate">
+      </div>
+
+      <div class="form-group">
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" [(ngModel)]="newTask.priority">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" name="status" [(ngModel)]="newTask.status">
+          <option value="To Do">To Do</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Done">Done</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="assignedTeamMembers">Assigned Team Members:</label>
+        <select id="assignedTeamMembers" name="assignedTeamMembers" [(ngModel)]="newTask.assignedTeamMembers" multiple>
+          <option *ngFor="let member of filteredTeamMembers" [value]="member._id">{{ member.name }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Create Task</button>
+      </div>
+    </form>
+  </div>
+</div>
